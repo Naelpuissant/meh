@@ -1,6 +1,6 @@
-import * as THREE from '../node_modules/three/build/three.module.js';
-import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
+import * as THREE from '../../node_modules/three/build/three.module.js';
+import { GLTFLoader } from '../../node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from '../../node_modules/three/examples/jsm/controls/OrbitControls.js';
 
 const background = 0x000000
 
@@ -71,22 +71,19 @@ function load_book(scale){
 
 function load_computer(scale){
     const textureLoader= new THREE.TextureLoader()
-    const baseColor = textureLoader.load("../assets/models/book/textures/Material.001_baseColor.png")
-    baseColor.flipY = false;
 
     const material = new THREE.MeshStandardMaterial({
-        color: "0xbdc3c7",
+        color: 0xbdc3c7,
         // normalMap: normalMap,
         // metalnessMap: metallicRoughness,
         metalness: 0.90,
         // roughnessMap: metallicRoughness,
         roughness: 0.25,
-        phog: true,
     });
 
     const loader = new GLTFLoader();
 
-    loader.load( '../assets/models/computer/scene.gltf', function ( gltf ) {
+    loader.load( './assets/models/computer/scene.gltf', function ( gltf ) {
         model = gltf.scene;
         model.traverse( function( child ) {
             if ( child instanceof THREE.Mesh ) {
