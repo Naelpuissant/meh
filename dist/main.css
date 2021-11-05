@@ -1,0 +1,24 @@
+body { margin: 0; }
+
+.wrapper {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 2;
+    display:block;
+}
+
+.wrapper-content {
+    color: #1dd1a1;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border: solid 4px #1dd1a1;
+}
+
+.wrapper-content h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
